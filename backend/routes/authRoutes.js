@@ -1,0 +1,11 @@
+import express from "express";
+import { adminLogin, deleteUser, feedback, getUsers, getUsersCount, login, Register } from "../controllers/authController.js";
+const router=express.Router();
+router.post("/register",Register);
+router.post("/login",login);
+router.post("/adminlogin",adminLogin);
+router.get("/getUsers",getUsers);
+router.get("/getUsersCount", getUsersCount);
+router.delete("/deleteUser/:username", deleteUser);
+router.post("/feedback",feedback);
+export default  router;
